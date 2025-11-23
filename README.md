@@ -1,2 +1,2 @@
 # language-learning
-i am working on an app/website (dunno yet)
+i am working on a learn a language program, the current languages avaliable is german and spanish :)
