@@ -9,12 +9,15 @@ def main():
         print("Choose mode: ")
         print("1: Revision Mode")
         print("2: Test English")
+        print("3: Test German")
         print("q: Quit")
-        mode = input("Enter 1 or 2: ")
+        mode = input("Enter your selection: ")
         if mode == "1":
             revisionmode(words)
         elif mode == "2":
             testegnlish(words)
+        elif mode == "3":
+            testgerman(words)
         elif mode == "q":
             break
         else:
@@ -54,6 +57,21 @@ def testegnlish(words):
             print("Correct")
         else:
             print(f"Wrong, the correct answer is '{english}'")
+
+
+def testgerman(words):
+    while True:
+        index = random.randint(0, len(words) - 1)
+        word = words[index]
+        print(f"english: '{word[1]}'")
+        guessg = input("type german ... or type 'q' to quit: ")
+        if guessg == "q":
+            break
+        german = word[0]
+        if guessg == german:
+            print("Correct")
+        else:
+            print(f"Wrong, the correct answer is '{german}'")
 
 
 if __name__ == "__main__":
